@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josué Mirlo - Poesía Transdisciplinar | UAEM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabecera literaria -->
+    <header class="poetic-header">
+        <div class="ink-splash"></div>
+        <h1 class="title">Josué Mirlo</h1>
+        <p class="subtitle">Poesía que trasciende disciplinas</p>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#investigacion" class="nav-link">Investigación</a></li>
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+                <li><a href="#poemas" class="nav-link">Poemas interactivos</a></li>
+                <li><a href="#cronistas" class="nav-link">Red de Cronistas</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto académico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de investigación -->
+    <section id="investigacion" class="research-section">
+        <div class="parchment-background">
+            <h2>Investigación Científica</h2>
+            <div class="research-tabs">
+                <button class="tab-button active" data-tab="contexto">Contexto Histórico</button>
+                <button class="tab-button" data-tab="analisis">Análisis Intertextual</button>
+                <button class="tab-button" data-tab="impacto">Impacto Educativo</button>
+            </div>
+            <div class="tab-content active" id="contexto">
+                <h3>El poeta-matemático</h3>
+                <p>Exploración del periodo 1929-1930 cuando Josué Mirlo (Arnulfo Robles Barrera) impartió matemáticas en el Instituto Científico y Literario...</p>
+            </div>
+            <div class="tab-content" id="analisis">
+                <h3>De "El Peregrino" a la ingeniería</h3>
+                <p>Análisis semiótico del poema que resonó con el Dr. Horacio Ramírez de Alba y otros profesionales técnicos...</p>
+            </div>
+            <div class="tab-content" id="impacto">
+                <h3>Pedagogía poética</h3>
+                <p>Resultados de talleres experimentales aplicando la obra de Mirlo en aulas de ingeniería...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería interactiva -->
+    <section id="galeria" class="gallery-section">
+        <h2>Galería Multimedia</h2>
+        <div class="gallery-container">
+            <div class="gallery-item" data-category="documentos">
+                <img src="images/gallery/documento1.jpg" alt="Documento histórico">
+                <div class="gallery-caption">Instituto Científico y Literario, 1929</div>
+            </div>
+            <!-- Más items se cargarán dinámicamente con JS -->
+        </div>
+        <div class="gallery-controls">
+            <button id="prev-btn" class="gallery-btn">‹</button>
+            <div class="gallery-categories">
+                <button class="category-btn active" data-category="all">Todo</button>
+                <button class="category-btn" data-category="documentos">Documentos</button>
+                <button class="category-btn" data-category="poemas">Manuscritos</button>
+                <button class="category-btn" data-category="universidad">UAEM</button>
+            </div>
+            <button id="next-btn" class="gallery-btn">›</button>
+        </div>
+    </section>
+
+    <!-- Poemas interactivos -->
+    <section id="poemas" class="poems-section">
+        <h2>Exploración Poética Interactiva</h2>
+        <div class="poem-container">
+            <div class="poem-text">
+                <h3>El Peregrino</h3>
+                <div class="poem-lines">
+                    <p class="poem-line highlight">Polvo fui del camino. Mas una Voz Perfecta</p>
+                    <p class="poem-line">me dijo como a Lázaro: -"Levántate y camina..."</p>
+                    <!-- Resto del poema -->
+                </div>
+            </div>
+            <div class="poem-analysis">
+                <div class="analysis-tool">
+                    <h4>Análisis por línea</h4>
+                    <p>Selecciona versos para ver interpretaciones multidisciplinares</p>
+                    <div id="line-analysis" class="analysis-result">
+                        <!-- Contenido dinámico -->
+                    </div>
+                </div>
+                <div class="annotate-tool">
+                    <h4>Añade tu interpretación</h4>
+                    <textarea placeholder="Desde tu disciplina, ¿cómo interpretas este verso?"></textarea>
+                    <button class="submit-btn">Enviar análisis</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Red de cronistas -->
+    <section id="cronistas" class="network-section">
+        <h2>Red Universitaria de Cronistas</h2>
+        <div class="network-visualization">
+            <!-- Visualización SVG dinámica de la red -->
+        </div>
+        <div class="member-info">
+            <h3>Dr. Horacio Ramírez de Alba</h3>
+            <p>Cronista de la Facultad de Ingeniería</p>
+            <blockquote>"La poesía de Mirlo dio sentido a mis caminatas científicas"</blockquote>
+        </div>
+    </section>
+
+    <!-- Contacto académico -->
+    <section id="contacto" class="contact-section">
+        <div class="contact-form">
+            <h2>Colaboración Académica</h2>
+            <form id="academic-contact">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="institution">Institución:</label>
+                    <input type="text" id="institution" required>
+                </div>
+                <div class="form-group">
+                    <label for="discipline">Disciplina:</label>
+                    <select id="discipline" required>
+                        <option value="">Seleccione...</option>
+                        <option value="ingenieria">Ingeniería</option>
+                        <option value="ciencias">Ciencias</option>
+                        <option value="humanidades">Humanidades</option>
+                        <option value="arte">Arte</option>
+                        <option value="otra">Otra</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Propuesta de colaboración:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar propuesta</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="literary-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/uaem-logo.png" alt="UAEM">
+            </div>
+            <div class="footer-links">
+                <a href="#">Repositorio Institucional</a>
+                <a href="#">Colegio de Cronistas</a>
+                <a href="#">Museo de Historia Universitaria</a>
+            </div>
+            <div class="footer-credits">
+                <p>Proyecto de investigación interdisciplinaria © 2023</p>
+                <p>Desarrollado con HTML5, CSS3 y JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/articles.js"></script>
+</body>
+</html>
